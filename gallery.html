@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | MoonLight</title>
+    <link rel="icon" type="image/png" href="/assets/fav-icon.jpeg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="header-styles.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+      /* Styles for the gallery */
+      #gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 20px;
+      }
+
+      #gallery img,
+      #gallery iframe {
+        width: 100%;
+        height: 300px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Start of header section -->
+    <header
+      data-aos="fade-in"
+      data-aos-delay="500"
+      data-aos-offset="500"
+      data-aos-easing="ease-in-sine"
+      class="header"
+      id="header"
+    >
+    <!-- Contact button for large screens -->
+      <div class="my-0 lg:my-4 text-center hidden lg:block">
+        <button id="order-button" class="w-[50%]">Contact US</button>
+      </div>
+
+      <!-- Navigation section -->
+      <section class="wrapper container">
+         <!-- Mobile navigation toggle -->
+        <div class="mobile-nav">
+          <div class="logo">
+            <a href="/" class="brand">
+              <img src="/assets/logo.png" alt="CIPD" />
+            </a>
+          </div>
+
+            <!-- Hamburger menu icon -->
+          <div class="hamburger">
+            <div class="burger" id="burger">
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+            </div>
+          </div>
+        </div>
+
+ <!-- Main navigation menu -->
+        <nav class="navbar" id="navbar">
+          <ul class="menu" id="menu">
+            <li class="menu-item first-menu-item">
+              <a href="/" class="menu-link">Home</a>
+            </li>
+            <li class="menu-item">
+              <a href="/festivals.html" class="menu-link">Festivals</a>
+            </li>
+            <li class="menu-item">
+              <a href="/about.html" class="menu-link">About Us</a>
+            </li>
+            <li class="menu-item">
+              <a href="/gallery.html" class="menu-link">Gallery </a>
+            </li>
+            <li class="menu-item">
+              <a href="index.html#festivals-worldwide" class="menu-link"
+                >Festivals WorldWide</a
+              >
+            </li>
+            <li class="menu-item">
+              <a href="/contact.html" class="menu-link">Submit Any Query</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    <!-- End of header section -->
+    <div id="zulfi"></div>
+
+    <main>
+
+      <!-- Section for Festival Content Heading -->
+      <section class="bg-[#610772] py-24 text-center">
+        <h1
+          data-aos="fade-in"
+          data-aos-delay="500"
+          data-aos-offset="0"
+          data-aos-easing="ease-in-sine"
+          data-aos-anchor-placement="top-bottom"
+          class="text-white text-4xl md:text-6xl lg:text-8xl font-bold"
+        >
+          Content Related to Festivals
+        </h1>
+      </section>
+
+      <!-- Gallery Section Displaying Festival Images -->
+      <div class="p-4">
+        <div id="gallery">
+          <img
+            src="https://media.audleytravel.com/-/media/images/home/blog/2011/september/top-festivals-around-the-world/diwali-festival-istock-1279036916-1080x1512.webp?q=79&w=800&h=571"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          /><img
+            src="https://images.contentstack.io/v3/assets/bltacc1a01c4d280f24/blt7211985df013f93b/65d4261777f34cd48cca40c5/Gion-Matsuri.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          /><img
+            src="https://images.contentstack.io/v3/assets/bltacc1a01c4d280f24/blt73193db9aceacaa9/65d423ed8d55b06b76614df8/rio-de-janeiro.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          /><img
+            src="https://images.contentstack.io/v3/assets/bltacc1a01c4d280f24/blt12270f94be8474ea/65d42750d3e4932fb4a9b203/Albuquerque-International-Balloon-Fiesta.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          /><img
+            src="https://images.contentstack.io/v3/assets/bltacc1a01c4d280f24/blt8cc39791ac39172d/65d4361727682e7f18e9c5ea/Tomatina.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          /><img
+            src="https://images.contentstack.io/v3/assets/bltacc1a01c4d280f24/bltbdce362d12e791e0/65d42905d3e493f1b9a9b207/burning-man.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          /><img
+            src="https://images.contentstack.io/v3/assets/bltacc1a01c4d280f24/bltd18213d242d1db74/65d425525b87e7397359e4e0/Carnival-of-Venice.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          /><img
+            src="https://images.contentstack.io/v3/assets/bltacc1a01c4d280f24/blt80f473e046a6090a/65d4206427682ec468e9c5be/Octoberfest.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          /><img
+            src="https://media.audleytravel.com/-/media/images/home/blog/2011/september/top-festivals-around-the-world/dancers-bhutan-shutterstock_273612779-1080x1512.webp?q=79&w=800&h=571"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          /><img
+            src="https://images.contentstack.io/v3/assets/bltacc1a01c4d280f24/bltefbe4c7a7f427aca/65d33584f4171c352cd38609/pexels-martin-lopez-2240771.jpg?auto=webp&format=pjpg&quality=80&width=900&height=500&fit=crop"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          /><img
+            src="https://greenglobaltravel.com/wp-content/uploads/2018/01/Top-Cultural-Festivals-Mardi-Gras.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          /><img
+            src="https://media.audleytravel.com/-/media/images/home/blog/2011/september/top-festivals-around-the-world/ice-festival-qiuebec-shutterstock_781747390-1080x1512.webp?q=79&w=800&h=571"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          /><img
+            src="https://greenglobaltravel.com/wp-content/uploads/2018/01/Best-Holiday-Festivals-Kings-Day-aka-Queens-Day.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          /><img
+            src="https://greenglobaltravel.com/wp-content/uploads/2012/03/Songkran-Festival.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          /><img
+            src="https://greenglobaltravel.com/wp-content/uploads/2012/03/Best-World-Music-Festivals-World-Sacred-Music-Festival-in-Fez-Morocco.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          /><img
+            src="https://greenglobaltravel.com/wp-content/uploads/2012/03/Womad-Festival.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          /><img
+            src="https://media.audleytravel.com/-/media/images/home/blog/2011/september/top-festivals-around-the-world/semana-santa-istock-464491848-1080x1512.webp?q=79&w=800&h=571"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          /><img
+            src="https://greenglobaltravel.com/wp-content/uploads/2012/03/Best-Jazz-Festivals-Montreux-Jazz-Festival.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          /><img
+            src="https://greenglobaltravel.com/wp-content/uploads/2012/03/Religious-Festivals-Around-the-World-Ouida-International-Voodoo-Festival.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          /><img
+            src="https://greenglobaltravel.com/wp-content/uploads/2012/03/Best-Religious-Festivals-Holi.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          /><img
+            src="https://greenglobaltravel.com/wp-content/uploads/2012/03/Religious-Festivals-Rumi-Mevlana-Festival.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          /><img
+            src="https://greenglobaltravel.com/wp-content/uploads/2012/03/Top-Religious-Festivals-Semana-Santa-2.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          /><img
+            src="https://greenglobaltravel.com/wp-content/uploads/2012/03/Religious-Festivals-Celebrated-Around-the-World-Vesak.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          /><img
+            src="https://s1.it.atcdn.net/wp-content/uploads/2020/01/7-Edinburgh-Fringe-Festival.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          /><img
+            src="https://s1.it.atcdn.net/wp-content/uploads/2020/01/DD9APX.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          /><img
+            src="https://s1.it.atcdn.net/wp-content/uploads/2020/01/Oktoberfest-–-Munich.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          /><img
+            src="https://s1.it.atcdn.net/wp-content/uploads/2020/01/Holi-Festival-India.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          /><img
+            src="https://media.audleytravel.com/-/media/images/home/blog/2011/september/top-festivals-around-the-world/day-of-the-dead-istock-1279713697-1080x1512.webp?q=79&w=800&h=571"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          />
+          <img
+            src="https://s1.it.atcdn.net/wp-content/uploads/2020/01/4-Semana-Santa-–-Seville.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          />
+          <img
+            src="https://s1.it.atcdn.net/wp-content/uploads/2020/01/5-Nozawa-Onsen-Fire-Festival.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          />
+          <img
+            src="https://s1.it.atcdn.net/wp-content/uploads/2020/01/6-Cannes-Film-Festival.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          />
+          <img
+            src="https://s1.it.atcdn.net/wp-content/uploads/2020/01/Carnival-Brazil.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          />
+          <img
+            src="https://s1.it.atcdn.net/wp-content/uploads/2020/01/Mardi-Gras-New-Orleans.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          />
+          <img
+            src="https://s1.it.atcdn.net/wp-content/uploads/2020/01/Snow-Ice-Festival-Harbin.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          />
+          <img
+            src="https://s1.it.atcdn.net/wp-content/uploads/2014/02/tomatina.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          />
+          <img
+            src="https://s1.it.atcdn.net/wp-content/uploads/2020/01/RXCFRJ.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          />
+          <img
+            src="https://cdn-imgix-open.headout.com/blog/Unusual+festivals/1.jpeg?fm=pjpg&auto=compress"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          />
+          <img
+            src="https://cdn-imgix-open.headout.com/blog/Unusual+festivals/2.jpeg?fm=pjpg&auto=compress"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          />
+          <img
+            src="https://cdn-imgix-open.headout.com/blog/Unusual+festivals/3.jpeg?fm=pjpg&auto=compress"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          />
+          <img
+            src="https://cdn-imgix-open.headout.com/blog/Unusual+festivals/4.jpg?fm=pjpg&auto=compress"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          />
+          <img
+            src="https://cdn-imgix-open.headout.com/blog/Unusual+festivals/5.png?fm=pjpg&auto=compress"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          />
+          <img
+            src="https://cdn-imgix-open.headout.com/blog/Unusual+festivals/6.jpeg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          />
+          <img
+            src="https://cdn-imgix-open.headout.com/blog/Unusual+festivals/7.jpeg?fm=pjpg&auto=compress"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          />
+          <img
+            src="https://cdn-imgix-open.headout.com/blog/Unusual+festivals/8.jpeg?fm=pjpg&auto=compress"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          />
+          <img
+            src="https://cdn-imgix-open.headout.com/blog/Unusual+festivals/9.jpeg?fm=pjpg&auto=compress"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          />
+          <img
+            src="https://cdn-imgix-open.headout.com/blog/Unusual+festivals/10.jpeg?fm=pjpg&auto=compress"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          />
+          <img
+            src="https://traveloutlandish.com/wp-content/uploads/2017/01/Thailand-Phuket-Vegetarian-Festival-CC-1080x720.jpg"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          />
+          <img
+            src="https://cdn-imgix-open.headout.com/blog/Unusual+festivals/11.png?fm=pjpg&auto=compress"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          />
+          <img
+            src="https://cdn-imgix-open.headout.com/blog/Unusual+festivals/12.png?fm=pjpg&auto=compress"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          />
+          <img
+            src="https://cdn-imgix-open.headout.com/blog/Unusual+festivals/13.jpeg?fm=pjpg&auto=compress"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          />
+          <img
+            src="https://cdn-imgix-open.headout.com/blog/Unusual+festivals/14.jpeg?fm=pjpg&auto=compress"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          />
+          <img
+            src="https://cdn-imgix-open.headout.com/blog/Unusual+festivals/15.png?fm=pjpg&auto=compress"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          />
+          <img
+            src="https://cdn-imgix-open.headout.com/blog/Unusual+festivals/16.jpeg?fm=pjpg&auto=compress"
+            alt="Placeholder Image"
+            class="object-cover h-80 w-full"
+          />
+        </div>
+      </div>
+    </main>
+
+
+       <!-- Footer Section -->
+    <footer class="bg-white py-24">
+      <div class="container mx-auto flex flex-wrap justify-between items-start">
+        <div class="flex flex-col items-start justify-start">
+          <img src="/assets/logo.png" alt="Logo" class="h-20 w-auto mb-4" />
+          <p class="text-gray-800 text-xl mb-8 mt-6 max-w-lg">
+            Moon Light is here to help you. With our large team of experts, we
+            provide comprehensive assistance.
+          </p>
+          <!-- simple li clases are used with same css classes as per in header to add navgation i footer too -->
+          <div class="flex items-center text-2xl ml-0 md:ml-[-2vw]">
+            <li class="menu-item mr-3">
+              <a href="/">Home</a>
+            </li>
+            <li class="menu-item mr-3">
+              <a href="/festivals.html">Festivals</a>
+            </li>
+            <li class="menu-item mr-3">
+              <a href="/about.html">About Us</a>
+            </li>
+            <li class="menu-item mr-3">
+              <a href="/gallery.html">Gallery </a>
+            </li>
+            <li class="menu-item mr-3">
+              <a href="#festivals-worldwide">Festivals WorldWide</a>
+            </li>
+          </div>
+          <!-- all of the icons are static as their are no links so cirsoe has given to over and icons are repaced to scial icons pictures from our locla assets  -->
+          
+            <!-- Social Media Icons Row -->
+          <div class="flex items-center mt-12">
+            <img
+              src="/assets/FB.png"
+              alt="Facebook"
+              class="h-12 w-auto mr-4 cursor-pointer"
+            />
+            <img
+              src="/assets/twitter.png"
+              alt="Twitter"
+              class="h-12 w-auto mr-4 cursor-pointer"
+            />
+            <img
+              src="/assets/Insta.png"
+              alt="Instagram"
+              class="h-12 w-auto mr-4 cursor-pointer"
+            />
+            <img
+              src="/assets/Linkedin.png"
+              alt="Instagram"
+              class="h-12 w-auto mr-4 cursor-pointer"
+            />
+          </div>
+        </div>
+
+             <!-- Contact Information Section -->
+        <div class="text-gray-800 mt-6 md:mt-0">
+          <h4
+            data-aos="fade-in"
+            data-aos-delay="500"
+            data-aos-offset="0"
+            data-aos-easing="ease-in-sine"
+            data-aos-anchor-placement="top-bottom"
+            class="text-3xl font-bold mb-4 text-[#400878]"
+          >
+            Contact
+          </h4>
+          <p class="text-xl mb-4">
+            <span class="font-semibold">WhatsApp:</span> +92 349 3130963
+          </p>
+          <p class="text-xl mb-8">MoonLight Festival</p>
+          <button
+            data-aos="fade-in"
+            data-aos-delay="500"
+            data-aos-offset="100"
+            data-aos-easing="ease-in-sine"
+            data-aos-anchor-placement="top-bottom"
+            id="order-button"
+            class="w-[205px] md:w-[270px]"
+          >
+            Contact US
+          </button>
+          <p class="text-xl mt-2 max-w-3xl mt-6">
+            Moon Light is here to help you. With our large team of experts, we
+            provide comprehensive assistance to the best of your
+            satisfaction.And provide deatils accordign to your spefic needs.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Footer with Copyright and Navigation Link -->
+
+    <div class="bg-[#610772] py-12 text-center text-white text-2xl font-normal">
+      <p class="text-white">
+        © 2024
+        <a
+          href="index.html"
+          class="text-white hover:opacity-80 font-semibold transition-opacity nav-link"
+        >
+          MoonLight Festival
+        </a>
+      </p>
+    </div>
+
+    <script src="header.js"></script>
+    <!-- <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterDropdown = document.getElementById("filter");
+        const galleryContainer = document.getElementById("gallery");
+
+        // Function to filter gallery items based on selection
+        function filterGalleryItems(filter) {
+          const galleryItems = galleryContainer.children;
+
+          for (let i = 0; i < galleryItems.length; i++) {
+            const item = galleryItems[i];
+            const itemType = item.tagName.toLowerCase();
+
+            if (
+              filter === "all" ||
+              (filter === "images" && itemType === "img") ||
+              (filter === "videos" && itemType === "iframe")
+            ) {
+              item.style.display = "block";
+            } else {
+              item.style.display = "none";
+            }
+          }
+        }
+
+        // Initial gallery load
+        filterGalleryItems(filterDropdown.value);
+
+        // Event listener for filter change
+        filterDropdown.addEventListener("change", function () {
+          filterGalleryItems(this.value);
+        });
+      });
+    </script> -->
+    <script>
+      var buttons = document.querySelectorAll("#order-button");
+
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          window.location.href = "contact.html";
+        });
+      });
+    </script>
+
+    <script>
+      // Smooth scroll function
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href").substring(1);
+          const targetElement = document.getElementById(targetId);
+
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

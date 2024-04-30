@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | MoonLight</title>
+    <!-- Favicon link -->
+    <link rel="icon" type="image/png" href="/assets/fav-icon.jpeg" />
+
+    <!-- Preconnect to Google Fonts for faster loading -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Google Fonts 'Quicksand' family style link -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom CSS for headers -->
+    <link rel="stylesheet" href="header-styles.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS library JavaScript link -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+      .float-button {
+        position: fixed;
+        z-index: 1;
+        width: 100px;
+        height: 60px;
+        bottom: 15px;
+        left: 15px;
+        background-color: #bbc6bf;
+        color: #fff;
+        text-align: center;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        cursor: pointer;
+      }
+
+      .whatsapp-float {
+        margin-top: 9.5px;
+        font-size: 40px;
+      }
+
+      @media (max-width: 768px) {
+        .float-button {
+          width: 50px;
+          height: 50px;
+        }
+
+        .whatsapp-float {
+          margin-top: 7.5px;
+          font-size: 35px;
+        }
+      }
+
+      .float-message {
+        position: fixed;
+        z-index: 1;
+        width: 250px;
+        bottom: 80px;
+        left: 20px;
+        display: none; /* Initially hide the message */
+      }
+    </style>
+  </head>
+
+  <body>
+
+     <!-- Container for the floating action button and message -->
+
+    <!-- <div class="group float">
+      <div class="float-button">
+        <i class="text-3xl my-auto">Your Location</i>
+        <p
+          class="hidden group-hover:block transition-all bg-white text-black text-3xl float-text rounded border-2 p-4 float-message"
+        >
+          <!-- User location will be displayed here -->
+        </p>
+      </div>
+    </div> -->
+    <header
+      data-aos="fade-in"
+      data-aos-delay="500"
+      data-aos-offset="500"
+      data-aos-easing="ease-in-sine"
+      class="header"
+      id="header"
+    >
+    <!-- Contact button section, hidden on smaller screens -->
+
+      <div class="my-0 lg:my-4 text-center hidden lg:block">
+        <button id="order-button" class="w-[50%]">Contact US</button>
+      </div>
+
+      <section class="wrapper container">
+        <div class="mobile-nav">
+          <div class="logo">
+            <a href="/" class="brand">
+              <img src="/assets/logo.png" alt="CIPD" />
+            </a>
+          </div>
+
+          <div class="hamburger">
+            <div class="burger" id="burger">
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+            </div>
+          </div>
+        </div>
+
+              <!-- Main navigation bar with links -->
+        <nav class="navbar" id="navbar">
+          <ul class="menu" id="menu">
+            <li class="menu-item first-menu-item">
+              <a href="/" class="menu-link">Home</a>
+            </li>
+            <li class="menu-item">
+              <a href="/festivals.html" class="menu-link">Festivals</a>
+            </li>
+            <li class="menu-item">
+              <a href="/about.html" class="menu-link">About Us</a>
+            </li>
+            <li class="menu-item">
+              <a href="/gallery.html" class="menu-link">Gallery </a>
+            </li>
+            <li class="menu-item">
+              <a href="#festivals-worldwide" class="menu-link"
+                >Festivals WorldWide</a
+              >
+            </li>
+            <li class="menu-item">
+              <a href="/contact.html" class="menu-link">Submit Any Query</a>
+            </li>
+          </ul>
+        </nav>
+           <!-- End Main navigation bar with links -->
+      </section>
+    </header>
+
+
+<!-- Start of Popup Modal for Newsletter Subscription -->
+    <div id="zulfi"></div>
+    <div id="popup-container" class="popup">
+      <div class="popup-content">
+        <span class="close text-4xl">&times;</span>
+
+         <!-- Logo image -->
+        <img src="/assets/logo.png" class="h-16 mx-auto" alt="" />
+        <p class="mt-4 text-[#610772] text-3xl">Subscribe to our newsletter:</p>
+        <form id="email-form" class="mt-4 flex flex-col justify-between">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            required
+            class="border-2 py-2 px-1 text-2xl focus:outline-none rounded-md"
+          />
+
+          <!-- Email input field -->
+          <button type="submit" class="w-[50%] ml-[25%] mt-5" id="pop-button">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+    <!-- End of Popup Modal for Newsletter Subscription -->
+
+
+    <main>
+
+      <!-- Start of Home Section with background image and responsive design settings -->
+      <section
+        id="home"
+        class="bg-[url(/assets/temp-purple-bg.png)] bg-cover bg-center bg-no-repeat text-white h-auto md:h-[60vh] md:h-[45vw] py-10"
+      >
+        <div
+          data-aos="fade-in"
+          data-aos-delay="500"
+          data-aos-offset="500"
+          data-aos-easing="ease-in-sine"
+          data-aos-anchor-placement="top-bottom"
+          class="container mx-auto flex flex-col md:flex-row justify-between items-center h-full"
+        >
+          <div class="text-center lg:text-left space-y-12 p-4 md:w-1/2">
+            <img
+              src="/assets/logo.png"
+              alt="Logo"
+              class="mb-8 mx-auto lg:mx-0"
+            />
+            <h2
+              class="text-[4rem] mb-4 font-semibold lg:font-bold leading-[30px] md:leading-[40px]"
+            >
+              Know details of Festivals <br />
+              WorldWide!
+            </h2>
+            <button id="festival-button" class="w-[200px] md:w-[300px] !py-8">
+              Explore Festivals
+            </button>
+          </div>
+        </div>
+      </section>
+<!-- End of Home Section with background image and responsive design settings -->
+
+
+<!-- Start of Section with white background and vertical padding -->
+      <section class="bg-white py-24">
+        <div
+          data-aos="fade-in"
+          data-aos-delay="500"
+          data-aos-offset="0"
+          data-aos-easing="ease-in-sine"
+          data-aos-anchor-placement="top-bottom"
+          class="container mx-auto text-center"
+        >
+          <h2
+            class="text-[4.5rem] text-[#610772] mb-16 font-bold tracking-wide leading-[35px] md:leading-[50px]"
+          >
+            Aim to provide <br />
+            details about Festivals
+          </h2>
+          <h2 class="text-6xl text-[#400878] mb-8 font-bold"></h2>
+          <button id="order-button" class="w-[250px] md:w-[350px] !py-8">
+            Learn more about us
+          </button>
+        </div>
+      </section>
+      <!-- End of Section with white background and vertical padding -->
+
+      <section
+        class="bg-[url(/assets/why-choose.png)] bg-cover bg-center h-[35vh] flex items-center justify-center py-18"
+      >
+        <div
+          data-aos="fade-in"
+          data-aos-delay="500"
+          data-aos-offset="0"
+          data-aos-easing="ease-in-sine"
+          data-aos-anchor-placement="top-bottom"
+          class="flex items-center justify-center flex-wrap gap-x-10"
+        >
+          <h3 class="text-[#610772] text-[8rem] capitalize font-light">
+            why choose
+          </h3>
+          <div class="mt-[30px] md:mt-[38px]">
+            <img
+              src="/assets/logo.png"
+              alt="Logo"
+              class="h-[50px] md:h-[60px]"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Start of a section containing multiple content blocks with images and text -->
+      <section>
+        <div class="flex flex-wrap justify-center items-center items-stretch">
+          <div
+            data-aos="fade-in"
+            data-aos-delay="500"
+            data-aos-offset="0"
+            data-aos-easing="ease-in-sine"
+            data-aos-anchor-placement="top-bottom"
+            class="w-full md:w-1/2 h-auto md:h-auto bg-[#535353] py-12 px-8 flex flex-col justify-center items-center space-y-8"
+          >
+            <div class="text-center mb-8">
+              <img src="/assets/first.svg" class="mx-auto" alt="SVG Image" />
+            </div>
+            <h2 class="text-5xl font-bold text-white mb-8 text-center">
+              Correct information
+            </h2>
+            <p class="text-white text-center max-w-lg text-[15px]">
+              Every festival we feature is carefully curated to showcase the
+              richness and diversity of cultures worldwide. Just as our writers
+              review assignments to correct any errors.
+            </p>
+          </div>
+          <div
+            data-aos="fade-in"
+            data-aos-delay="500"
+            data-aos-offset="100"
+            data-aos-easing="ease-in-sine"
+            data-aos-anchor-placement="top-bottom"
+            class="w-full md:w-1/2 h-auto md:h-auto bg-[#B083B9] py-12 px-8 flex flex-col justify-center items-center space-y-8"
+          >
+            <div class="text-center mb-8">
+              <img src="assets/second.svg" class="mx-auto" alt="SVG Image" />
+            </div>
+            <h2 class="text-5xl font-bold text-white mb-8 text-center">
+              Seasoned Festivals
+            </h2>
+            <p class="text-white text-center max-w-lg text-[15px]">
+              We provide information related to a every festival expected to be
+              worldwide and we are deedicated to make it eassy for you to get it
+              done
+            </p>
+          </div>
+          <div
+            data-aos="fade-in"
+            data-aos-delay="500"
+            data-aos-offset="0"
+            data-aos-easing="ease-in-sine"
+            data-aos-anchor-placement="top-bottom"
+            class="w-full md:w-1/2 h-auto md:h-auto bg-[#029779] py-12 px-8 flex flex-col justify-center items-center space-y-8"
+          >
+            <div class="text-center mb-8">
+              <img src="/assets/third.svg" class="mx-auto" alt="SVG Image" />
+            </div>
+            <h2 class="text-5xl font-bold text-white mb-8 text-center">
+              Contact Process
+            </h2>
+            <p class="text-white text-center max-w-lg text-[15px]">
+              Our process is simple and hassle-free you can be at your earliest
+              in just filling the form and if any query is resloved you will be
+              contacted with my team,
+            </p>
+          </div>
+          <div
+            data-aos="fade-in"
+            data-aos-delay="500"
+            data-aos-offset="100"
+            data-aos-easing="ease-in-sine"
+            data-aos-anchor-placement="top-bottom"
+            class="w-full md:w-1/2 h-auto md:h-auto bg-[#610772] py-12 px-8 flex flex-col justify-center items-center space-y-8"
+          >
+            <div class="text-center mb-8">
+              <img src="assets/fourth.svg" class="mx-auto" alt="SVG Image" />
+            </div>
+            <h2 class="text-5xl font-bold text-white mb-8 text-center">
+              Expert Guidance
+            </h2>
+            <p class="text-white text-center max-w-lg text-[15px]">
+              Our team provides professional mentorship and guidance, ensuring
+              that you receive the support you need.
+            </p>
+          </div>
+        </div>
+      </section>
+<!-- End of the section containing multiple content blocks -->
+
+
+<!-- Start of section highlighting festivals worldwide -->
+  <section class="bg-white py-24" id="festivals-worldwide">
+        <div
+          data-aos="fade-in"
+          data-aos-delay="500"
+          data-aos-offset="0"
+          data-aos-easing="ease-in-sine"
+          data-aos-anchor-placement="top-bottom"
+          class="container mx-auto"
+        >
+          <h2 class="text-5xl font-bold text-center mb-12 text-[#EC752B]">
+            Festivals Worlwide
+          </h2>
+          <div class="mx-auto text-[#610772]">
+            <p class="text-3xl text-center">
+              Various Festivals occurs WorldWide based
+            </p>
+            <p class="text-3xl text-center">
+              upon the cuture,religion and faith
+            </p>
+            <p class="text-3xl text-center mb-8">of group of people</p>
+            <p class="text-3xl text-center">
+              Festivals are generaly devided across on basis
+            </p>
+            <p class="text-3xl text-center">of religion and one's country</p>
+          </div>
+        </div>
+      </section>
+      <!-- End of section highlighting festivals worldwide -->
+
+
+      <!-- Start of section featuring different types of festivals -->
+      <section class="bg-white pt-24 pb-40">
+        <div class="container mx-auto">
+          <div
+            data-aos="fade-in"
+            data-aos-delay="500"
+            data-aos-offset="0"
+            data-aos-easing="ease-in-sine"
+            data-aos-anchor-placement="top-bottom"
+            class="flex flex-wrap gap-14 justify-center"
+          >
+            <div
+              style="box-shadow: 10px 10px #610772"
+              class="w-[230px] flex flex-col justify-center items-center px-20 py-12 space-y-16 border-[1px] border-[#610772] bg-white"
+            >
+              <h3
+                class="text-[40px] font-semibold text-white bg-[#600772b3] w-32 h-32 flex justify-center items-center rounded-full border-[3px] border-[#610772]"
+              >
+                1
+              </h3>
+              <div class="text-center">
+                <h4
+                  class="text-3xl font-bold text-[#610772] h-[60px] md:h-[100px]"
+                >
+                  Carnivals Worldwide
+                </h4>
+                <button id="festival-button" class="w-[150px]">EXPLORE</button>
+              </div>
+            </div>
+            <div
+              style="box-shadow: 10px 10px #610772"
+              class="w-[230px] flex flex-col justify-center items-center px-20 py-12 space-y-16 border-[1px] border-[#610772] bg-white"
+            >
+              <h3
+                class="text-[40px] font-semibold text-white bg-[#600772b3] w-32 h-32 flex justify-center items-center rounded-full border-[3px] border-[#610772]"
+              >
+                2
+              </h3>
+              <div class="text-center">
+                <h4
+                  class="text-3xl font-bold text-[#610772] h-[60px] md:h-[100px]"
+                >
+                  Religious Festivals
+                </h4>
+                <button id="festival-button" class="w-[150px]">EXPLORE</button>
+              </div>
+            </div>
+            <div
+              style="box-shadow: 10px 10px #610772"
+              class="w-[230px] flex flex-col justify-center items-center px-20 py-12 space-y-16 border-[1px] border-[#610772] bg-white"
+            >
+              <h3
+                class="text-[40px] font-semibold text-white bg-[#600772b3] w-32 h-32 flex justify-center items-center rounded-full border-[3px] border-[#610772]"
+              >
+                3
+              </h3>
+              <div class="text-center">
+                <h4
+                  class="text-3xl font-bold text-[#610772] h-[60px] md:h-[100px]"
+                >
+                  National Festivals
+                </h4>
+                <button id="festival-button" class="w-[150px]">EXPLORE</button>
+              </div>
+            </div>
+            <div
+              style="box-shadow: 10px 10px #610772"
+              class="w-[230px] flex flex-col justify-center items-center px-20 py-12 space-y-16 border-[1px] border-[#610772] bg-white"
+            >
+              <h3
+                class="text-[40px] font-semibold text-white bg-[#600772b3] w-32 h-32 flex justify-center items-center rounded-full border-[3px] border-[#610772]"
+              >
+                4
+              </h3>
+              <div class="text-center">
+                <h4
+                  class="text-3xl font-bold text-[#610772] h-[60px] md:h-[100px]"
+                >
+                  Other &nbsp;&nbsp; Festivals
+                </h4>
+                <button id="festival-button" class="w-[150px]">EXPLORE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End of section featuring different types of festivals -->
+
+
+      <!-- Start of section displaying an image -->
+      <section>
+        <img
+          src="/assets/home-before-footer.svg"
+          alt="Your Image"
+          class="w-full h-auto"
+        />
+      </section>
+      <!-- End of section displaying an image -->
+
+
+<!-- Start of section offering assistance with festival details -->
+      <section class="bg-white py-32">
+        <div
+          data-aos="fade-in"
+          data-aos-delay="500"
+          data-aos-offset="0"
+          data-aos-easing="ease-in-sine"
+          data-aos-anchor-placement="top-bottom"
+          class="container mx-auto"
+        >
+          <h2 class="text-[5rem] font-bold text-center mb-12 text-[#610772]">
+            Stuck to Know details of Festivals?
+          </h2>
+          <div class="mx-auto flex flex-col items-center justify-center">
+            <p class="text-[2rem] text-[#610772] text-center">
+              Moon Light is here to help you. With our large team of experts, we
+              provide
+            </p>
+            <p class="text-[2rem] text-[#610772] text-center mb-10">
+              comprehensive assistance to the best of your satisfaction.
+            </p>
+            <button id="order-button" class="w-[200px] md:w-[300px] !py-8">
+              Resolve Any Query
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- End of section offering assistance with festival details -->
+
+
+      <!-- Start of section displaying an image -->
+      <section>
+        <img
+          src="/assets/footer-waves.svg"
+          alt="Your Image"
+          class="w-full h-full"
+        />
+      </section>
+      <!-- End of section displaying an image -->
+
+
+    </main>
+
+
+<!-- Start of footer section -->
+    <footer class="bg-white py-24">
+      <div class="container mx-auto flex flex-wrap justify-between items-start">
+        <div class="flex flex-col items-start justify-start">
+          <img src="/assets/logo.png" alt="Logo" class="h-20 w-auto mb-4" />
+          <p class="text-gray-800 text-xl mb-8 mt-6 max-w-lg">
+            Moon Light is here to help you. With our large team of experts, we
+            provide comprehensive assistance.
+          </p>
+          <!-- simple li clases are used with same css classes as per in header to add navgation i footer too -->
+          <div class="flex items-center text-2xl ml-0 md:ml-[-2vw]">
+
+             <!-- Navigation links -->
+            <li class="menu-item mr-3">
+              <a href="/">Home</a>
+            </li>
+            <li class="menu-item mr-3">
+              <a href="/festivals.html">Festivals</a>
+            </li>
+            <li class="menu-item mr-3">
+              <a href="/about.html">About Us</a>
+            </li>
+            <li class="menu-item mr-3">
+              <a href="/gallery.html">Gallery </a>
+            </li>
+            <li class="menu-item mr-3">
+              <a href="#festivals-worldwide">Festivals WorldWide</a>
+            </li>
+          </div>
+          <!-- all of the icons are static as their are no links so cirsoe has given to over and icons are repaced to scial icons pictures from our locla assets  -->
+          
+          
+             <!-- Social media icons -->
+             <div class="flex items-center mt-12">
+              
+              <a href="https://www.facebook.com/profile.php?id=61558723310355">
+                <img
+                  src="/assets/FB.png"
+                  alt="Facebook"
+                  class="h-12 w-auto mr-4 cursor-pointer"
+                />
+                </a>
+                <a href="https://www.youtube.com//@MoonLight-un8xy">
+            <img
+              src="assets/youtubeicon.png"  
+              alt="Youtube"
+              class="h-12 w-auto mr-4 cursor-pointer"
+            />
+          </a>
+            
+            <img
+              src="/assets/Insta.png"
+              alt="Instagram"
+              class="h-12 w-auto mr-4 cursor-pointer"
+            />
+            <img
+              src="/assets/Linkedin.png"
+              alt="Linkedin"
+              class="h-12 w-auto mr-4 cursor-pointer"
+            />
+          </div>
+        </div>
+
+        <div class="text-gray-800 mt-6 md:mt-0">
+          <h4
+            data-aos="fade-in"
+            data-aos-delay="500"
+            data-aos-offset="0"
+            data-aos-easing="ease-in-sine"
+            data-aos-anchor-placement="top-bottom"
+            class="text-3xl font-bold mb-4 text-[#400878]"
+          >
+            Contact
+          </h4>
+          <p class="text-xl mb-4">
+            <span class="font-semibold">WhatsApp:</span> +92 349 3130963
+          </p>
+          <p class="text-xl mb-8"> MoonLight Festivals </p>
+          <button
+            data-aos="fade-in"
+            data-aos-delay="500"
+            data-aos-offset="100"
+            data-aos-easing="ease-in-sine"
+            data-aos-anchor-placement="top-bottom"
+            id="order-button"
+            class="w-[205px] md:w-[270px]"
+          >
+            Contact US
+          </button>
+          <p class="text-xl mt-2 max-w-3xl mt-6">
+            Moon Light is here to help you. With our large team of experts, we
+            provide comprehensive assistance to the best of your
+            satisfaction.And provide deatils accordign to your spefic needs.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- End of footer section -->
+
+
+
+    <div class="bg-[#610772] py-12 text-center text-white text-2xl font-normal">
+      <p class="text-white">
+        © 2024
+        <a
+          href="index.html"
+          class="text-white hover:opacity-80 font-semibold transition-opacity nav-link"
+        >
+          MoonLight Festival
+        </a>
+      </p>
+    </div>
+
+    <script src="header.js"></script>
+
+
+    <!-- Start of script for handling button clicks -->
+    <script>
+      var buttons = document.querySelectorAll("#order-button");
+
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          window.location.href = "contact.html";
+        });
+      });
+    </script>
+    <!-- End of script for handling button clicks -->
+
+
+
+
+
+<!-- Start of script for handling festival button clicks -->
+    <script>
+      var buttons = document.querySelectorAll("#festival-button");
+
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          window.location.href = "festivals.html";
+        });
+      });
+    </script>
+
+    <!-- End of script for handling festival button clicks -->
+
+
+
+    <script>
+      // Smooth scroll function
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href").substring(1);
+          const targetElement = document.getElementById(targetId);
+
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+    </script>
+    <script>
+      // Function to retrieve user's location
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+          alert("Geolocation is not supported by this browser.");
+        }
+      }
+
+      // Callback function to display user's location
+      function showPosition(position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        const messageElement = document.querySelector(".float-message");
+        messageElement.textContent = `Latitude: ${latitude}, Longitude: ${longitude}`;
+        messageElement.style.display = "block"; // Display the message
+      }
+
+      // Call the getLocation function when the button is clicked
+      document
+        .querySelector(".float-button")
+        .addEventListener("click", getLocation);
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var popup = document.getElementById("popup-container");
+        var closeButton = document.querySelector(".close");
+        var emailForm = document.getElementById("email-form");
+
+        // Show the popup when the page loads
+        popup.style.display = "block";
+
+        // Close the popup when the close button is clicked
+        closeButton.addEventListener("click", function () {
+          popup.style.display = "none";
+        });
+
+        // Collect email address when form is submitted
+        emailForm.addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent default form submission
+          var email = emailForm.querySelector('input[type="email"]').value;
+          console.log("Email submitted: " + email); // You can replace this with your own logic for collecting emails
+          popup.style.display = "none"; // Hide the popup after email submission
+        });
+      });
+    </script>
+  </body>
+</html>

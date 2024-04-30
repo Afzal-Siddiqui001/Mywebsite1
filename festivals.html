@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Festivals | MoonLight</title>
+    <link rel="icon" type="image/png" href="/assets/fav-icon.jpeg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="header-styles.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+
+  <body>
+     <!-- Start of header section -->
+     <header
+     data-aos="fade-in"
+     data-aos-delay="500"
+     data-aos-offset="500"
+     data-aos-easing="ease-in-sine"
+     class="header"
+     id="header"
+   >
+   <!-- Contact button for large screens -->
+     <div class="my-0 lg:my-4 text-center hidden lg:block">
+       <button id="order-button" class="w-[50%]">Contact US</button>
+     </div>
+
+     <!-- Navigation section -->
+     <section class="wrapper container">
+        <!-- Mobile navigation toggle -->
+       <div class="mobile-nav">
+         <div class="logo">
+           <a href="/" class="brand">
+             <img src="/assets/logo.png" alt="CIPD" />
+           </a>
+         </div>
+
+           <!-- Hamburger menu icon -->
+         <div class="hamburger">
+           <div class="burger" id="burger">
+             <span class="burger-line"></span>
+             <span class="burger-line"></span>
+           </div>
+         </div>
+       </div>
+
+<!-- Main navigation menu -->
+       <nav class="navbar" id="navbar">
+         <ul class="menu" id="menu">
+           <li class="menu-item first-menu-item">
+             <a href="/" class="menu-link">Home</a>
+           </li>
+           <li class="menu-item">
+             <a href="/festivals.html" class="menu-link">Festivals</a>
+           </li>
+           <li class="menu-item">
+             <a href="/about.html" class="menu-link">About Us</a>
+           </li>
+           <li class="menu-item">
+             <a href="/gallery.html" class="menu-link">Gallery </a>
+           </li>
+           <li class="menu-item">
+             <a href="index.html#festivals-worldwide" class="menu-link"
+               >Festivals WorldWide</a
+             >
+           </li>
+           <li class="menu-item">
+             <a href="/contact.html" class="menu-link">Submit Any Query</a>
+           </li>
+         </ul>
+       </nav>
+     </section>
+   </header>
+   <!-- End of header section -->
+
+
+    <div id="zulfi"></div>
+    <main>
+      <!-- Section: Festivals WorldWide heading with animation and responsive design -->
+      <section class="bg-[#610772] py-24 text-center">
+        <h1
+          data-aos="fade-in"
+          data-aos-delay="500"
+          data-aos-offset="0"
+          data-aos-easing="ease-in-sine"
+          data-aos-anchor-placement="top-bottom"
+          class="text-white text-4xl md:text-6xl lg:text-8xl font-bold"
+        >
+          Festivals WorldWide
+        </h1>
+      </section>
+      <!-- End of section -->
+
+      <!-- Section: Filters for religion, country, and month -->
+      <div class="flex justify-around py-6 w-full md:w-[60%] mx-auto">
+        <div class="p-4">
+
+           <!-- Religion filter -->
+          <label for="religion-filter" class="text-3xl font-bold text-[#610772]"
+            >Filter By Religion: &nbsp;</label
+          >
+          <select
+            id="religion-filter"
+            class="text-3xl font-semibold focus:outline-none border-2 px-1 py-[0.5px] rounded-md"
+          >
+            <option value="all">All</option>
+            <option value="Islam">Islam</option>
+            <option value="Christianity">Christianity</option>
+            <option value="Sikhism">Sikhism</option>
+            <option value="Buddhism">Buddhism</option>
+            <option value="Judaism">Judaism</option>
+          </select>
+        </div>
+            <!-- Country filter -->
+               <div class="p-4">
+          <label for="country-filter" class="text-3xl font-bold text-[#610772]">
+            Filter By Country: &nbsp;
+          </label>
+          <select
+            id="country-filter"
+            class="text-3xl font-semibold focus:outline-none border-2 px-1 py-[0.5px] rounded-md"
+          >
+            <option value="all" class="custom-option">All</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="Cananda">Cananda</option>
+            <option value="USA">USA</option>
+            <option value="South Africa">Africa</option>
+            <option value="India">India</option>
+            <option value="Belgium">Japan</option>
+            <option value="EU">EU</option>
+          </select>
+        </div>
+
+        <!-- Month filter -->
+        <div class="p-4">
+          <label for="month-filter" class="text-3xl font-bold text-[#610772]"
+            >Filter By Month: &nbsp;</label
+          >
+          <select
+            id="month-filter"
+            class="text-3xl font-semibold focus:outline-none border-2 px-1 py-[0.5px] rounded-md"
+          >
+            <option value="all">All</option>
+            <option value="Jan">Jan</option>
+            <option value="Feb">Feb</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="Sept">Sept</option>
+            <option value="Oct">Oct</option>
+            <option value="Nov">Nov</option>
+            <option value="Dec">Dec</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- End of filter section -->
+     
+
+      <!-- Start of main section with festival cards displayed -->
+      <section class="py-10 px-4 lg:px-0">
+        <div class="container mx-auto">
+          <div class="flex flex-wrap justify-center gap-8">
+
+            <!-- Individual festival card for DIWALI -->
+            <div
+              data-religion="Buddhism"
+              data-month="Nov"
+              data-country="India"
+              id="festival-type"
+              class="flex flex-col justify-between bg-white shadow-lg rounded-lg overflow-hidden w-[400px]"
+            >
+              <div class="p-6">
+                <h2
+                  class="text-5xl font-semibold text-[#610772] flex justify-center mb-4"
+                >
+                  DIWALI
+                </h2>
+                <img
+                  src="https://media.audleytravel.com/-/media/images/home/blog/2011/september/top-festivals-around-the-world/diwali-festival-istock-1279036916-1080x1512.webp?q=79&w=800&h=571"
+                  alt="DIWALI"
+                  class="object-cover h-80 w-full"
+                />
+                <p class="text-2xl text-gray-600 mt-6 font-semibold">
+                  This festival of lights usually occurs between mid-October and
+                  mid-November, and is celebrated by a number of religions
+                  across India and beyond. Marking the triumph of good over
+                  evil, light over darkness, and knowledge over ignorance, it’s
+                  interpreted differently across Hindu, Sikh, and Jain
+                  communities.
+                </p>
+              </div>
+
+               <!-- Links for downloading details and exploring the gallery -->
+              <div class="flex justify-around">
+                <a
+                  href="assets/DIWALI.pdf"
+                  download="assets/DIWALI.pdf"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Download Details</a
+                >
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Explore Gallery</a
+                >
+              </div>
+            </div>
+            <!-- End of festival card for DIWALI -->
+
+
+
+            <!-- Start of festival card for DIA DE MUERTOS -->
+            <div
+              id="festival-type"
+              data-religion="Christianity"
+              data-month="Oct"
+              data-country="USA"
+              class="flex flex-col justify-between bg-white shadow-lg rounded-lg overflow-hidden w-[400px]"
+            >
+              <div class="p-6">
+                <h2
+                  class="text-5xl font-semibold text-[#610772] flex justify-center mb-4"
+                >
+                  DIA DE MUERTOS
+                </h2>
+
+                <img
+                  src="https://media.audleytravel.com/-/media/images/home/blog/2011/september/top-festivals-around-the-world/day-of-the-dead-istock-1279713697-1080x1512.webp?q=79&w=800&h=571"
+                  alt="Festival 1"
+                  class="object-cover h-80 w-full"
+                />
+                <p class="text-2xl text-gray-600 mt-6 font-semibold">
+                  A Mexican festival that takes place between 31st October and
+                  2nd November, 'Day of the Dead' is when families come together
+                  to pray for and remember lost relatives. Ofrendas (altars) are
+                  constructed in both public spaces and private homes, and are
+                  often richly decorated with pumpkins and squashes, marigolds,
+                  candles, and sugar skulls.
+                </p>
+              </div>
+              <!-- Links for downloading details and exploring the gallery -->
+              <div class="flex justify-around">
+                <a
+                  href="assets/Día de Muertos.pdf"
+                  download="assets/Día de Muertos.pdf"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Download Details</a
+                >
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Explore Gallery</a
+                >
+              </div>
+            </div>
+            <!-- End of festival card for DIA DE MUERTOS -->
+
+
+               <!-- Start of festival card for SONKRN FESTIVAL -->
+            <div
+              id="festival-type"
+              data-religion="Buddhism"
+              data-month="April"
+              data-country="South Africa"
+              class="flex flex-col justify-between bg-white shadow-lg rounded-lg overflow-hidden w-[400px]"
+            >
+              <div class="p-6">
+                <h2
+                  class="text-5xl font-semibold text-[#610772] flex justify-center mb-4"
+                >
+                  SONKRN FESTVAL
+                </h2>
+                <img
+                  src="https://media.audleytravel.com/-/media/images/home/blog/2011/september/top-festivals-around-the-world/semana-santa-istock-464491848-1080x1512.webp?q=79&w=800&h=571"
+                  alt="Festival 1"
+                  class="object-cover h-80 w-full"
+                />
+                <p class="text-2xl text-gray-600 mt-6 font-semibold">
+                  Songkran is the welcoming of the Buddhist new year in
+                  Thailand. It’s also celebrated across Southeast Asia, albeit
+                  under different names and on slightly different dates. In
+                  Thailand, it usually occurs over a long weekend in mid-April.
+                  Festivities include parades, markets, and dance performances,
+                  but the festival’s best known for its water fights.
+                </p>
+              </div>
+              <div class="flex justify-around">
+                <a
+                  href="assets/Songkran.pdf"
+                  download="assets/Songkran.pdf"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Download Details</a
+                >
+
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Explore Gallery</a
+                >
+              </div>
+            </div>
+            <!-- End of festival card for SONKRN FESTIVAL -->
+
+            
+          </div>
+        </div>
+
+
+        <div class="container mx-auto mt-6">
+          <div class="flex flex-wrap justify-center gap-8">
+            <div
+              id="festival-type"
+              data-religion="Buddhism"
+              data-month="August"
+              data-country="Cananda"
+              class="flex flex-col justify-between bg-white shadow-lg rounded-lg overflow-hidden w-[400px]"
+            >
+              <!-- Festival card for OBON FESTIVAL -->
+              <div class="p-6">
+                <h2
+                  class="text-5xl font-semibold text-[#610772] flex justify-center mb-4"
+                >
+                  OBON FESTIVAL
+                </h2>
+                <img
+                  src="https://media.audleytravel.com/-/media/images/home/blog/2011/september/top-festivals-around-the-world/obon-festival-istock-1188457047-1080x1512.webp?q=79&w=800&h=571"
+                  alt="Festival 1"
+                  class="object-cover h-80 w-full"
+                />
+                <p class="text-2xl text-gray-600 mt-6 font-semibold">
+                  For more than 500 years, the Japanese have commemorated their
+                  ancestors during Obon, a three-day festival that’s usually
+                  held in August. It’s celebrated through Bon Odori folk dances,
+                  seasonal cuisine, and the lighting of bonfires. Some of the
+                  largest fires are in the hills surrounding Kyoto, with huge
+                  bonfires arranged in the shape of kanji, Japanese characters
+                </p>
+              </div>
+               
+
+
+              <div class="flex justify-around">
+                <a
+                  href="OBON FESTIVAL.pdf"
+                  download="OBON FESTIVAL.pdf"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Download Details</a
+                >
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Explore Gallery</a
+                >
+              </div>
+            </div>
+             <!-- End Festival OBON FESTIVAL -->
+
+            <div
+              id="festival-type"
+              data-religion="Buddhism"
+              data-month="March"
+              data-country="South Africa"
+              class="flex flex-col justify-between bg-white shadow-lg rounded-lg overflow-hidden w-[400px]"
+            >
+              <div class="p-6">
+                <h2
+                  class="text-5xl font-semibold text-[#610772] flex justify-center mb-4"
+                >
+                  HERMAS WHALE
+                </h2>
+
+                <img
+                  src="https://media.audleytravel.com/-/media/images/home/blog/2011/september/top-festivals-around-the-world/hermanus-shutterstock_93271054-1080x1512.webp?q=79&w=800&h=571"
+                  alt="Festival 1"
+                  class="object-cover h-80 w-full"
+                />
+                <p class="text-2xl text-gray-600 mt-6 font-semibold">
+                  Known as South Africa’s whale-watching capital, the small
+                  seaside town of Hermanus sits on Walker Bay, just a couple of
+                  hours southeast of Cape Town. Here the water stays deep right
+                  up to the shoreline, so even when you’re not out on a boat
+                  trip, you’ll often have close-up views of resident Bryde’s
+                  whales and, between June and October, migratory southern right
+                  and humpback whales.
+                </p>
+              </div>
+              <div class="flex justify-around">
+                <a
+                  href="assets/Hermas Whale Festival.pdf"
+                  download="assets/Hermas Whale Festival.pdf"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Download Details</a
+                >
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Explore Gallery</a
+                >
+              </div>
+            </div>
+
+            <!-- Festival card for HERMAS WHALE -->
+            <div
+              id="festival-type"
+              data-religion="Buddhism"
+              data-month="June"
+              data-country="Belgium"
+              class="flex flex-col justify-between bg-white shadow-lg rounded-lg overflow-hidden w-[400px]"
+            >
+            <!-- Festival card for  TSECHUS -->
+              <div class="p-6">
+                <h2
+                  class="text-5xl font-semibold text-[#610772] flex justify-center mb-4"
+                >
+                  TSECHUS
+                </h2>
+                <img
+                  src="https://media.audleytravel.com/-/media/images/home/blog/2011/september/top-festivals-around-the-world/dancers-bhutan-shutterstock_273612779-1080x1512.webp?q=79&w=800&h=571"
+                  alt="Festival 1"
+                  class="object-cover h-80 w-full"
+                />
+                <p class="text-2xl text-gray-600 mt-6 font-semibold">
+                  A festival of religious ritual dances, tsechus are integral to
+                  Bhutanese culture and take place everywhere, from tiny,
+                  isolated villages to some of the country's largest dzongs
+                  (monasteries). People travel from all over the country to
+                  watch monks perform elaborate dances while wearing bright
+                  costumes that swirl to rhythmic drumbeats.
+                </p>
+              </div>
+              <!-- end Festival card for  TSECHUS -->
+
+              <div class="flex justify-around">
+                <a
+                  href="assets/Tsechus.pdf"
+                  download="assets/Tsechus.pdf"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Download Details</a
+                >
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Explore Gallery</a
+                >
+              </div>
+            </div>
+            <!-- Festival card for HERMAS WHALE -->
+
+
+          </div>
+        </div>
+
+        <!-- Start of main container for festival cards -->
+        <div class="container mx-auto mt-6">
+          <div class="flex flex-wrap justify-center gap-8">
+
+             <!-- Festival card for MARDI GRAS -->
+            <div
+              id="festival-type"
+              data-religion="Christianity"
+              data-month="March"
+              data-country="EU"
+              class="flex flex-col justify-between bg-white shadow-lg rounded-lg overflow-hidden w-[400px]"
+            >
+              <div class="p-6">
+                <h2
+                  class="text-5xl font-semibold text-[#610772] flex justify-center mb-4"
+                >
+                  MARDI GRAS
+                </h2>
+                <img
+                  src="https://media.audleytravel.com/-/media/images/home/blog/2011/september/top-festivals-around-the-world/madi-gras-istock-479604202-1080x1512.webp?q=79&w=800&h=571"
+                  alt="Festival 1"
+                  class="object-cover h-80 w-full"
+                />
+                <p class="text-2xl text-gray-600 mt-6 font-semibold">
+                  Also known as Fat Tuesday, this celebration marks the last day
+                  before Lent, when traditionally people would eat rich, fatty
+                  foods before fasting. While it’s celebrated by Christians
+                  worldwide, New Orleans has become almost synonymous with the
+                  festival, recording its first parade in 1857.
+                </p>
+              </div>
+              <div class="flex justify-around">
+                <a
+                  href="assets/Mardi Gras.pdf"
+                  download="assets/Mardi Gras.pdf"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Download Details</a
+                >
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Explore Gallery</a
+                >
+              </div>
+            </div>
+             <!-- End Festival MARDI GRAS -->
+
+
+              <!-- Festival card for QUÉBEC CARNIVAL -->
+            <div
+              id="festival-type"
+              data-religion="Christianity"
+              data-month="Feb"
+              data-country="USA"
+              class="flex flex-col justify-between bg-white shadow-lg rounded-lg overflow-hidden w-[400px]"
+            >
+              <div class="p-6">
+                <h2
+                  class="text-5xl font-semibold text-[#610772] flex justify-center mb-4"
+                >
+                  QUÉBEC CARNIVAL
+                </h2>
+
+                <img
+                  src="https://media.audleytravel.com/-/media/images/home/blog/2011/september/top-festivals-around-the-world/ice-festival-qiuebec-shutterstock_781747390-1080x1512.webp?q=79&w=800&h=571"
+                  alt="Festival 1"
+                  class="object-cover h-80 w-full"
+                />
+                <p class="text-2xl text-gray-600 mt-6 font-semibold">
+                  In January or February each year, Québec City embraces the
+                  cold as residents and visitors take to its brightly
+                  illuminated streets for a warming winter festival. Lasting two
+                  weeks, the carnival features two night-time parades led by its
+                  cheerful mascot, Bonhomme (‘good-natured man’), whose huge ice
+                  palace is built and sculpted specially each year and acts as a
+                  focal point for the festivities.
+                </p>
+              </div>
+              <div class="flex justify-around">
+                <a
+                  href="assets/Québec Winter Carnival.pdf"
+                  download="assets/Québec Winter Carnival.pdf"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Download Details</a
+                >
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Explore Gallery</a
+                >
+              </div>
+            </div>
+               <!-- End Festival card for QUÉBEC CARNIVAL -->
+
+
+               <!-- Festival card for VENICE CARNIVAL -->
+
+            <div
+              id="festival-type"
+              data-religion="Christianity"
+              data-month="Nov"
+              data-country="USA"
+              class="flex flex-col justify-between bg-white shadow-lg rounded-lg overflow-hidden w-[400px]"
+            >
+              <div class="p-6">
+                <h2
+                  class="text-5xl font-semibold text-[#610772] flex justify-center mb-4"
+                >
+                  VENICE CARNIVA
+                </h2>
+                <img
+                  src="https://media.audleytravel.com/-/media/images/home/blog/2011/september/top-festivals-around-the-world/venice-carnival-istock-1132271296-1080x1512.webp?q=79&w=800&h=571"
+                  alt="Festival 1"
+                  class="object-cover h-80 w-full"
+                />
+                <p class="text-2xl text-gray-600 mt-6 font-semibold">
+                  Held across the two weeks leading up to Lent, Venice Carnival
+                  is renowned for its extravagantly decorated masks and bright
+                  costumes. Dating back to the 11th century, the carnival
+                  includes parades, live music, and other open-air entertainment
+                  focused around Saint Mark’s Square, as well as a contest for
+                  la maschera più bella (the most beautiful mask). You can also
+                  watch gondola and boat parades along the Grand Canal.
+                </p>
+              </div>
+
+              <div class="flex justify-around">
+                <a
+                  href="assets/Venice Carnival.pdf"
+                  download="assets/Venice Carnival.pdf"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Download Details</a
+                >
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Explore Gallery</a
+                >
+              </div>
+            </div>
+            <!-- End Festival card for VENICE CARNIVAL -->
+
+          </div>
+        </div>
+        <!-- End of main container for festival cards -->
+
+
+        <!-- Start Main container for festival cards -->
+        <div class="container mx-auto mt-6">
+          <div class="flex flex-wrap justify-center gap-8">
+
+            <!-- Festival card for Eid Milad un Nabi -->
+            <div
+              id="festival-type"
+              data-religion="Islam"
+              data-month="Sept"
+              data-country="Pakistan"
+              class="flex flex-col justify-between bg-white shadow-lg rounded-lg overflow-hidden w-[400px]"
+            >
+              <div class="p-6">
+                <h2
+                  class="text-5xl font-semibold text-[#610772] flex justify-center mb-4"
+                >
+                  EID MILAD UN NABI
+                </h2>
+                <img
+                  src="https://mosafir.pk/upload/ck_images/images/1659077371_953320.jpg"
+                  alt="Festival 1"
+                  class="object-cover h-80 w-full"
+                />
+                <p class="text-2xl text-gray-600 mt-6 font-semibold">
+                  Eid Milad un Nabi is celebrated as the day of the Prophet's
+                  (PBUH) birth. Processions are held in every town and city in
+                  Pakistan, and a great number of people take part in them.
+                  Special gatherings are conducted in mosques and other places,
+                  in which scholars shed light on the life and teachings of our
+                  beloved prophet.
+                </p>
+              </div>
+              <div class="flex justify-around">
+                <a
+                  href="assets/Eid Milad Un Nabi.pdf"
+                  download="assets/Eid Milad Un Nabi.pdf"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Download Details</a
+                >
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Explore Gallery</a
+                >
+              </div>
+            </div>
+            <!-- End Festival card for Eid Milad un Nabi -->
+
+
+            <!-- Festival card for Christmas -->
+            <div
+              id="festival-type"
+              data-religion="Christianity"
+              data-month="Dec"
+              data-country="USA"
+              class="flex flex-col justify-between bg-white shadow-lg rounded-lg overflow-hidden w-[400px]"
+            >
+              <div class="p-6">
+                <h2
+                  class="text-5xl font-semibold text-[#610772] flex justify-center mb-4"
+                >
+                  CHRISTMAS
+                </h2>
+
+                <img
+                  src="https://mosafir.pk/upload/ck_images/images/1659077665_857132.jpg"
+                  alt="Festival 1"
+                  class="object-cover h-80 w-full"
+                />
+                <p class="text-2xl text-gray-600 mt-6 font-semibold">
+                  On the 25th of December, the Christian community celebrates
+                  its most important event, known as Christmas. The celebration
+                  is cheerfully celebrated throughout the county. At churches,
+                  special prayers are held, and families gather to congratulate
+                  one another. It's a chance to wear new clothes and eat special
+                  dishes.
+                </p>
+              </div>
+              <div class="flex justify-around">
+                <a
+                  href="assets/The Spirit of Christmas.pdf"
+                  download="assets/The Spirit of Christmas.pdf"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Download Details</a
+                >
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Explore Gallery</a
+                >
+              </div>
+            </div>
+            <!-- End Festival card for Christmas -->
+
+             <!-- Festival card for Guru Nanak Day -->
+            <div
+              id="festival-type"
+              data-religion="Sikhism"
+              data-month="Nov"
+              data-country="India"
+              class="flex flex-col justify-between bg-white shadow-lg rounded-lg overflow-hidden w-[400px]"
+            >
+              <div class="p-6">
+                <h2
+                  class="text-5xl font-semibold text-[#610772] flex justify-center mb-4"
+                >
+                  GURU NANAK DAY
+                </h2>
+                <img
+                  src="https://mosafir.pk/upload/ck_images/images/1659078064_762813.jpg"
+                  alt="Festival 1"
+                  class="object-cover h-80 w-full"
+                />
+                <p class="text-2xl text-gray-600 mt-6 font-semibold">
+                  Sikh guests from India to celebrate the birthday of Guru
+                  Nanak. Pakistan has also established the Kartarpur corridor to
+                  foster religious harmony between Muslims and Sikhs.and it has
+                  all the importance in the world regarding all the sikh
+                  community.
+                </p>
+              </div>
+              <div class="flex justify-around">
+                <a
+                  href="assets/GURU NANAK DAY.pdf"
+                  download="assets/GURU NANAK DAY.pdf"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Download Details</a
+                >
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Explore Gallery</a
+                >
+              </div>
+            </div>
+            <!-- End Festival card for Guru Nanak Day -->
+          </div>
+        </div>
+        <!-- End  Main container for festival cards -->
+
+
+
+        <!-- Start Main container for festival cards -->
+        <div class="container mx-auto mt-6">
+          <div class="flex flex-wrap justify-center gap-8">
+
+              <!-- Festival card for Gion Matsuri -->
+            <div
+              id="festival-type"
+              data-religion="Judaism"
+              data-month="March"
+              data-country="Cananda"
+              class="flex flex-col justify-between bg-white shadow-lg rounded-lg overflow-hidden w-[400px]"
+            >
+              <div class="p-6">
+                <h2
+                  class="text-5xl font-semibold text-[#610772] flex justify-center mb-4"
+                >
+                  Gion Matsuri
+                </h2>
+                <img
+                  src="https://s1.it.atcdn.net/wp-content/uploads/2018/02/1-Gion-Festival.jpg"
+                  alt="Festival 1"
+                  class="object-cover h-80 w-full"
+                />
+                <p class="text-2xl text-gray-600 mt-6 font-semibold">
+                  Widely considered to be the summer festival in Japan, Gion
+                  Matsuri is more than 1000 years old. It all started as a means
+                  to appease the gods who wrought chaos by way of fire, floods
+                  and earthquakes, but these days, it’s a little more
+                  light-hearted and certainly a huge tourist magnet. A highlight
+                  of the Kyoto festival is the Yamahoko Float Procession,
+                  featuring floats akin to beautifully intricate works of art.
+                </p>
+              </div>
+              <div class="flex justify-around">
+                <a
+                  href="assets/Gion Matsuri.pdf"
+                  download="assets/Gion Matsuri.pdf"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Download Details</a
+                >
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Explore Gallery</a
+                >
+              </div>
+            </div>
+                     <!-- End Festival card for Gion Matsuri -->
+
+                     <!-- Festival card for Songkran -->
+            <div
+              id="festival-type"
+              data-religion="Buddhism"
+              data-month="June"
+              data-country="Japan"
+              class="flex flex-col justify-between bg-white shadow-lg rounded-lg overflow-hidden w-[400px]"
+            >
+              <div class="p-6">
+                <h2
+                  class="text-5xl font-semibold text-[#610772] flex justify-center mb-4"
+                >
+                  Songkran
+                </h2>
+                <img
+                  src="https://s1.it.atcdn.net/wp-content/uploads/2020/01/3-Songkran-Festival.jpg"
+                  alt="Festival 1"
+                  class="object-cover h-80 w-full"
+                />
+                <p class="text-2xl text-gray-600 mt-6 font-semibold">
+                  A water fight on a national scale, Songkran in Thailand is the
+                  celebration of the Buddhist New Year. Initially, water played
+                  a part in this auspicious day by being poured over statues of
+                  Buddha, but these days, the drenching isn’t just reserved for
+                  deities and its purpose of purification is applied to everyone
+                  who doesn’t take shelter. Although still a spiritual and
+                  religious festival with everyone paying a visit to their local
+                  monastery.
+                </p>
+              </div>
+              <div class="flex justify-around">
+                <a
+                  href="assets/Songkran.pdf"
+                  download="assets/Songkran.pdf"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Download Details</a
+                >
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Explore Gallery</a
+                >
+              </div>
+            </div>
+            <!-- End Festival card for Songkran -->
+
+
+              <!-- Festival card for Busójárás Hungary -->
+            <div
+              id="festival-type"
+              data-religion="Christianity"
+              data-month="July"
+              data-country="EU"
+              class="flex flex-col justify-between bg-white shadow-lg rounded-lg overflow-hidden w-[400px]"
+            >
+              <div class="p-6">
+                <h2
+                  class="text-5xl font-semibold text-[#610772] flex justify-center mb-4"
+                >
+                  Busójárás Hungary
+                </h2>
+                <img
+                  src="https://cdn-imgix-open.headout.com/blog/Unusual+festivals/17.jpeg?fm=pjpg&auto=compress"
+                  alt="Festival 1"
+                  class="object-cover h-80 w-full"
+                />
+                <p class="text-2xl text-gray-600 mt-6 font-semibold">
+                  Busójárás is Hungary’s wildest festival. With a blend of pagan
+                  rituals, folk dancing and devilish masks, the rowdy carnival
+                  is held in the small town of Mohács to scare off the last days
+                  of winter. It is also seen as a celebration of the local
+                  Croatian minority. The festival re-enacts the 16th-century
+                  Battle of Mohacs where hundreds of busós (locals wearing
+                  scary-looking masks).
+                </p>
+              </div>
+              <div class="flex justify-around">
+                <a
+                  href="assets/Busójárás.pdf"
+                  download="assets/Busójárás.pdf"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Download Details</a
+                >
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Explore Gallery</a
+                >
+              </div>
+            </div>
+              <!-- End Festival card for Busójárás Hungary -->
+          </div>
+        </div>
+        <!-- End Main container for festival cards -->
+
+
+
+        <!-- Start Main container for festival cards -->
+        <div class="container mx-auto mt-6">
+          <div class="flex flex-wrap justify-center gap-8">
+
+              <!-- Festival card for World Toe Wrestling -->
+            <div
+              id="festival-type"
+              data-religion="Christianity"
+              data-month="Jan"
+              data-country="Japan"
+              class="flex flex-col justify-between bg-white shadow-lg rounded-lg overflow-hidden w-[400px]"
+            >
+              <div class="p-6">
+                <h2
+                  class="text-5xl font-semibold text-[#610772] flex justify-center mb-4"
+                >
+                  World Toe Wrestling
+                </h2>
+                <img
+                  src="https://cdn-imgix-open.headout.com/blog/Unusual+festivals/20.jpeg?fm=pjpg&auto=compress"
+                  alt="Festival 1"
+                  class="object-cover h-80 w-full"
+                />
+                <p class="text-2xl text-gray-600 mt-6 font-semibold">
+                  The list of the most unusual festivals in the world will not
+                  be complete without mentioning the World Toe Wrestling
+                  Championship. Held every year in Ashbourne, UK - the
+                  competition welcomes the best toe wrestles from all over the
+                  world to battle against one another for the title! The sport
+                  involves two opponents who lock feet in an attempt to pin each
+                  other’s foot down
+                </p>
+              </div>
+              <div class="flex justify-around">
+                <a
+                  href="assets/World Toe Wrestling Championship.pdf"
+                  download="assets/World Toe Wrestling Championship.pdf"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Download Details</a
+                >
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Explore Gallery</a
+                >
+              </div>
+            </div>
+              <!-- End Festival card for World Toe Wrestling -->
+
+            <!-- Festival card for Saidai-ji Eyo Hadaka -->
+
+              <div
+              id="festival-type"
+              data-religion="Buddhism"
+              data-month="August"
+              data-country="Japan"
+              class="flex flex-col justify-between bg-white shadow-lg rounded-lg overflow-hidden w-[400px]"
+            >
+              <div class="p-6">
+                <h2
+                  class="text-5xl font-semibold text-[#610772] flex justify-center mb-4"
+                >
+                  Saidai-ji Eyo Hadaka
+                </h2>
+
+                <img
+                  src="https://cdn-imgix-open.headout.com/blog/Unusual+festivals/19.jpeg?fm=pjpg&auto=compress"
+                  alt="Festival 1"
+                  class="object-cover h-80 w-full"
+                />
+                <p class="text-2xl text-gray-600 mt-6 font-semibold">
+                  Up to 10,000 men take part in the famous festival of Saidai-ji
+                  Eyo Hadaka Matsuri in the hope of gaining good luck for the
+                  entire year! Participants wear a minimum amount of clothing,
+                  usually just a fundoshi loincloth to flight and eventually
+                  grab one of the two sacred Shingi sticks tossed by the priest.
+                </p>
+              </div>
+              <div class="flex justify-around">
+                <a
+                  href="assets/Saidai-ji Eyo Hadaka.pdf"
+                  download="assets/Saidai-ji Eyo Hadaka.pdf"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Download Details</a
+                >
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Explore Gallery</a
+                >
+              </div>
+            </div>
+            <!-- End Festival card for Saidai-ji Eyo Hadaka -->
+
+
+                <!-- Festival card for Naki Sumo -->
+            <div
+              id="festival-type"
+              data-religion="Buddhism"
+              data-month="Jun"
+              data-country="Belgium"
+              class="flex flex-col justify-between bg-white shadow-lg rounded-lg overflow-hidden w-[400px]"
+            >
+              <div class="p-6">
+                <h2
+                  class="text-5xl font-semibold text-[#610772] flex justify-center mb-4"
+                >
+                  Naki Sumo
+                </h2>
+                <img
+                  src="https://cdn-imgix-open.headout.com/blog/Unusual+festivals/18.jpeg?fm=pjpg&auto=compress"
+                  alt="Festival 1"
+                  class="object-cover h-80 w-full"
+                />
+                <p class="text-2xl text-gray-600 mt-6 font-semibold">
+                  Making a baby cry is probably the worst thing you can do,
+                  however, Japan is here to prove you wrong. Naki Sumo is a
+                  400-year old tradition where you get to witness an entire
+                  event based on grown men’s ability to make babies cry!. The
+                  rules are simple; whoever makes one of the babies cry first,
+                  wins.
+                </p>
+              </div>
+              <div class="flex justify-around">
+                <a
+                  href="assets/Naki Sumo.pdf"
+                  download="assets/Naki Sumo.pdf"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Download Details</a
+                >
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Explore Gallery</a
+                >
+              </div>
+            </div>
+                <!-- Festival card for Naki Sumo -->
+          </div>
+        </div>
+        <!-- End Main container  -->
+
+         
+        <!-- Start Main container for festival cards -->
+        <div class="container mx-auto mt-6">
+          <div class="flex flex-wrap justify-center gap-8">
+
+
+              <!-- Festival card for Saint Patrick’s Festival -->
+            <div
+              id="festival-type"
+              data-religion="Judaism"
+              data-month="Sept"
+              data-country="EU"
+              class="flex flex-col justify-between bg-white shadow-lg rounded-lg overflow-hidden w-[400px]"
+            >
+              <div class="p-6">
+                <h2
+                  class="text-5xl font-semibold text-[#610772] flex justify-center mb-4"
+                >
+                  Saint Patrick’s Festival
+                </h2>
+                <img
+                  src="https://s1.it.atcdn.net/wp-content/uploads/2020/01/4-Saint-Patricks-Festival-Dublin.jpg"
+                  alt="Festival 1"
+                  class="object-cover h-80 w-full"
+                />
+                <p class="text-2xl text-gray-600 mt-6 font-semibold">
+                  Sure, Saint Patrick’s Day is celebrated anywhere in the world
+                  where there is an Irish diaspora (or even just an Irish pub),
+                  but if you’re going to get involved, there’s no better place
+                  than Dublin. This festival runs for five days and five nights
+                  in March and is packed fuller than a leprechaun’s pot of gold
+                  with a program of music, performing arts, literature, tours
+                  and food events.
+                </p>
+              </div>
+              <div class="flex justify-around">
+                <a
+                  href="assets/Saint Patrick.pdf"
+                  download="assets/Saint Patrick.pdf"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Download Details</a
+                >
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Explore Gallery</a
+                >
+              </div>
+            </div>
+            <!-- End Festival card for Saint Patrick’s Festival -->
+
+            
+            <!-- Festival card for Nozawa Onsen Fire Event -->
+            <div
+              id="festival-type"
+              data-religion="Buddhism"
+              data-month="July"
+              data-country="South Africa"
+              class="flex flex-col justify-between bg-white shadow-lg rounded-lg overflow-hidden w-[400px]"
+            >
+              <div class="p-6">
+                <h2
+                  class="text-5xl font-semibold text-[#610772] flex justify-center mb-4"
+                >
+                  Nozawa Onsen Fire Event
+                </h2>
+
+                <img
+                  src="https://s1.it.atcdn.net/wp-content/uploads/2020/01/5-Nozawa-Onsen-Fire-Festival.jpg"
+                  alt="Festival 1"
+                  class="object-cover h-80 w-full"
+                />
+                <p class="text-2xl text-gray-600 mt-6 font-semibold">
+                  If you’re planning a ski trip to Japan, it’s well worth timing
+                  it to coincide with the wild and slightly alarming Nozawa
+                  Onsen Dosojin Matsuri. Come winter, the beautiful Japanese
+                  town of Nozawa lies half-submerged in powder, making it not
+                  only excellent for skiing, but the ideal place to watch the
+                  lighting of a towering pyre and fire-fuelled battle between
+                  villagers.
+                </p>
+              </div>
+              <div class="flex justify-around">
+                <a
+                  href="assets/Nozawa Onsen Fire Festival.pdf"
+                  download="assets/Nozawa Onsen Fire Festival.pdf"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Download Details</a
+                >
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Explore Gallery</a
+                >
+              </div>
+            </div>
+            <!--End Festival card for Nozawa Onsen Fire Event -->
+
+
+
+                  <!-- Festival card for KITE EVENT -->
+            <div
+              id="festival-type"
+              data-religion="Sikhism"
+              data-month="April"
+              data-country="India"
+              class="flex flex-col justify-between bg-white shadow-lg rounded-lg overflow-hidden w-[400px]"
+            >
+              <div class="p-6">
+                <h2
+                  class="text-5xl font-semibold text-[#610772] flex justify-center mb-4"
+                >
+                  KITE EVENT
+                </h2>
+                <img
+                  src="https://traveloutlandish.com/wp-content/uploads/2017/01/India-Gujarat-Kite-Festival-CC.jpg"
+                  alt="Festival 1"
+                  class="object-cover h-80 w-full"
+                />
+                <p class="text-2xl text-gray-600 mt-6 font-semibold">
+                  The International Kite Festival in Gujarat marks the end of
+                  winter and the approaching harvest season. Anyone who
+                  celebrates will dig the abundant local food (yum!) and kites
+                  of all shapes and colors filling the sky.There are friendly
+                  competitions in every neighbourhoods in which every challenger
+                  vies to be the king of skies and defeat the rest by cutting
+                  their kites through an act of deft aerial skills.
+                </p>
+              </div>
+              <div class="flex justify-around">
+                <a
+                  href="assets/KITE EVENT Festival.pdf"
+                  download="assets/KITE EVENT Festival.pdf"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Download Details</a
+                >
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Explore Gallery</a
+                >
+              </div>
+            </div>
+                  <!-- End  Festival card for KITE EVENT -->
+          </div>
+        </div>
+        <!-- End Main container  -->
+
+
+         <!-- start Main container  -->
+        <div class="container mx-auto mt-6">
+          <div class="flex flex-wrap justify-center gap-8">
+
+
+             <!-- Festival card for Sitges Bed Race -->
+            <div
+              id="festival-type"
+              data-religion="Christianity"
+              data-month="May"
+              data-country="EU"
+              class="flex flex-col justify-between bg-white shadow-lg rounded-lg overflow-hidden w-[400px]"
+            >
+              <div class="p-6">
+                <h2
+                  class="text-5xl font-semibold text-[#610772] flex justify-center mb-4"
+                >
+                  SITGES BED RACE
+                </h2>
+                <img
+                  src="https://traveloutlandish.com/wp-content/uploads/2017/01/Spain-Sitges-Carnival-Bed-Race-Collab-1080x694.jpg"
+                  alt="Festival 1"
+                  class="object-cover h-80 w-full"
+                />
+                <p class="text-2xl text-gray-600 mt-6 font-semibold">
+                  The Sitges Carnival Bed Race is the perfect combination of
+                  respectable footrace and Carnival debauchery. Teams of four
+                  will strap their fifth team member onto a bed, dress in a
+                  costume, and race to the finish line using manpower only.One
+                  of the craziest festivals you can attend around Carnival time
+                  is the Bed Race.
+                </p>
+              </div>
+              <div class="flex justify-around">
+                <a
+                  href="assets/SITGES BED RACE FESTIVAL.pdf"
+                  download="assets/SITGES BED RACE FESTIVAL.pdf"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Download Details</a
+                >
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Explore Gallery</a
+                >
+              </div>
+            </div>
+             <!-- End Festival card for Sitges Bed Race -->
+
+
+
+             <!-- Festival card for Battle of Oranges -->
+             <div
+              id="festival-type"
+              data-religion="Christianity"
+              data-month="March"
+              data-country="EU"
+              class="flex flex-col justify-between bg-white shadow-lg rounded-lg overflow-hidden w-[400px]"
+            >
+              <div class="p-6">
+                <h2
+                  class="text-5xl font-semibold text-[#610772] flex justify-center mb-4"
+                >
+                  BATTLE OF ORANGES
+                </h2>
+
+                <img
+                  src="https://traveloutlandish.com/wp-content/uploads/2016/12/Italy-Festivals-Battle-of-Oranges-Collab-1080x719.jpg"
+                  alt="Festival 1"
+                  class="object-cover h-80 w-full"
+                />
+                <p class="text-2xl text-gray-600 mt-6 font-semibold">
+                  While the actual origin of the Battle of the Oranges is
+                  unknown, theories are that the city-wide food fight started as
+                  a rebellion against an Ivrean tyrant. For this festival, you
+                  can hide behind the nets, or arm yourself with oranges to join
+                  the battle.he Battle of the Oranges is definitely one of
+                  Italy’s craziest festivals.
+                </p>
+              </div>
+              <div class="flex justify-around">
+                <a
+                  href="assets/The Battle of Oranges Festival.pdf"
+                  download="assets/The Battle of Oranges Festival.pdf"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Download Details</a
+                >
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Explore Gallery</a
+                >
+              </div>
+            </div>
+             <!-- End Festival card for Battle of Oranges -->
+
+              <!-- Festival card for Oktoberfest -->
+            <div
+              id="festival-type"
+              data-religion="Judaism"
+              data-month="Oct"
+              data-country="Belgium"
+              class="flex flex-col justify-between bg-white shadow-lg rounded-lg overflow-hidden w-[400px]"
+            >
+              <div class="p-6">
+                <h2
+                  class="text-5xl font-semibold text-[#610772] flex justify-center mb-4"
+                >
+                  OKTOBERFEST
+                </h2>
+                <img
+                  src="https://traveloutlandish.com/wp-content/uploads/2017/01/Germany-Munich-Oktoberfest-CC-1080x720.jpg"
+                  alt="Festival 1"
+                  class="object-cover h-80 w-full"
+                />
+                <p class="text-2xl text-gray-600 mt-6 font-semibold">
+                  Munich’s 18-day folk festival is all about the beer, but the
+                  amusement rides, brass music, and traditional foods are
+                  nothing to balk at.It has to reserved and their is no specifc
+                  age limit to this festuval we enjoy every moment of it as we
+                  can and they do too.
+                </p>
+              </div>
+              <div class="flex justify-around">
+                <a
+                  href="assets/Oktoberfest.pdf"
+                  download="assets/Oktoberfest.pdf"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Download Details</a
+                >
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Explore Gallery</a
+                >
+              </div>
+            </div>
+             <!-- End Festival card for Oktoberfest -->
+          </div>
+        </div>
+        <!-- End Main container  -->
+
+
+        
+        
+          <!-- Start Main container  -->
+        <div class="container mx-auto mt-6">
+          <div class="flex flex-wrap justify-center gap-8">
+
+
+             <!-- Festival card for Eid-ul-Fitr -->
+
+            <div
+              data-religion="Islam"
+              data-month="Nov"
+              data-country="Pakistan"
+              id="festival-type"
+              class="flex flex-col justify-between bg-white shadow-lg rounded-lg overflow-hidden w-[400px]"
+            >
+              <div class="p-6">
+                <h2
+                  class="text-5xl font-semibold text-[#610772] flex justify-center mb-4"
+                >
+                  Eid-ul-Fitr
+                </h2>
+                <img
+                  src="https://res.cloudinary.com/www-travelpakistani-com/image/upload/v1681975370/Eid_ul_Fitr.jpg"
+                  alt="Festival 1"
+                  class="object-cover h-80 w-full"
+                />
+                <p class="text-2xl text-gray-600 mt-6 font-semibold">
+                  Eid-ul-Fitr is one of the most important religious festivals
+                  celebrated by Muslims all around the world. It marks the end
+                  of the holy month of Ramadan, during which Muslims fast from
+                  dawn till dusk. On the day of Eid-ul-Fitr, people dress up in
+                  new clothes, offer special prayers in mosques, and exchange
+                  gifts and sweets with each other. The festival is a time for
+                  forgiveness and showing gratitude to Allah for His blessings.
+                </p>
+              </div>
+              <div class="flex justify-around">
+                <a
+                  href="assets/Eid al.pdf"
+                  download="assets/Eid al.pdf"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Download Details</a
+                >
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Explore Gallery</a
+                >
+              </div>
+            </div>
+             <!-- End Festival card for Eid-ul-Fitr -->
+
+
+             <!-- Festival card for Shandur Polo Festival -->
+
+            <div
+              id="festival-type"
+              data-religion="all"
+              data-month="May"
+              data-country="Pakistan"
+              class="flex flex-col justify-between bg-white shadow-lg rounded-lg overflow-hidden w-[400px]"
+            >
+              <div class="p-6">
+                <h2
+                  class="text-5xl font-semibold text-[#610772] flex justify-center mb-4"
+                >
+                  Shandur Polo Festival
+                </h2>
+
+                <img
+                  src="https://res.cloudinary.com/www-travelpakistani-com/image/upload/v1674896033/shandur_polo_festival.jpg"
+                  alt="Festival 1"
+                  class="object-cover h-80 w-full"
+                />
+                <p class="text-2xl text-gray-600 mt-6 font-semibold">
+                  Shandur Polo Festival is an annual cultural event held in the
+                  Chitral district of Khyber Pakhtunkhwa province. The festival
+                  is held at the Shandur Pass, which is located at an altitude
+                  of 3,734 meters above sea level. The event features a
+                  traditional polo match played between the teams of Chitral and
+                  Gilgit. The festival also includes traditional dance
+                  performances, music, and food.
+                </p>
+              </div>
+              <div class="flex justify-around">
+                <a
+                  href="assets/Shandur Polo Festival.pdf"
+                  download="assets/Shandur Polo Festival.pdf"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Download Details</a
+                >
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Explore Gallery</a
+                >
+              </div>
+            </div>
+            <!-- End Festival card for Shandur Polo Festival -->
+
+             <!-- Festival card for Eid-ul-Adha -->
+            <div
+              id="festival-type"
+              data-religion="Islam"
+              data-month="Dec"
+              data-country="Pakistan"
+              class="flex flex-col justify-between bg-white shadow-lg rounded-lg overflow-hidden w-[400px]"
+            >
+              <div class="p-6">
+                <h2
+                  class="text-5xl font-semibold text-[#610772] flex justify-center mb-4"
+                >
+                  Eid-ul-Adha
+                </h2>
+                <img
+                  src="https://res.cloudinary.com/www-travelpakistani-com/image/upload/v1681975370/Eid_ul_Adha.jpg"
+                  alt="Festival 1"
+                  class="object-cover h-80 w-full"
+                />
+                <p class="text-2xl text-gray-600 mt-6 font-semibold">
+                  Eid-ul-Adha, also known as the 'Festival of Sacrifice,' is
+                  celebrated by Muslims in honor of the willingness of Prophet
+                  Ibrahim (AS) to sacrifice his son Ismail (AS) for the sake of
+                  Allah's command. On this day, Muslims sacrifice animals like
+                  goats, cows, or sheep and distribute the meat among family,
+                  friends, and the poor. It is also a time for Muslims to
+                  reflect on the values of sacrifice, obedience, and faith.
+                </p>
+              </div>
+              <div class="flex justify-around">
+                <a
+                  href="assets/Eid al adha .pdf"
+                  download="assets/Eid al adha .pdf"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Download Details</a
+                >
+
+                <a
+                  href="gallery.html"
+                  class="block py-2 px-4 text-center text-[#610772] font-semibold hover:underline text-2xl"
+                  >Explore Gallery</a
+                >
+              </div>
+            </div>
+             <!-- End Festival card for Eid-ul-Adha -->
+          </div>
+        </div>
+          <!-- End Main container  -->
+
+
+      </section>
+      <!-- End of main section with festival cards displayed -->
+    </main>
+<!-- End Section: Festivals WorldWide heading with animation and responsive design -->
+
+
+
+
+    <footer class="bg-white py-24">
+      <div class="container mx-auto flex flex-wrap justify-between items-start">
+
+         <!-- Left section with logo, description, and navigation links -->
+        <div class="flex flex-col items-start justify-start">
+          <img src="/assets/logo.png" alt="Logo" class="h-20 w-auto mb-4" />
+          <p class="text-gray-800 text-xl mb-8 mt-6 max-w-lg">
+            Moon Light is here to help you. With our large team of experts, we
+            provide comprehensive assistance.
+          </p>
+            
+          <!-- simple li clases are used with same css classes as per in header to add navgation i footer too -->
+
+          <!-- Navigation links -->
+          <div class="flex items-center text-2xl ml-0 md:ml-[-2vw]">
+            <li class="menu-item mr-3">
+              <a href="/">Home</a>
+            </li>
+            <li class="menu-item mr-3">
+              <a href="/festivals.html">Festivals</a>
+            </li>
+            <li class="menu-item mr-3">
+              <a href="/about.html">About Us</a>
+            </li>
+            <li class="menu-item mr-3">
+              <a href="/gallery.html">Gallery </a>
+            </li>
+            <li class="menu-item mr-3">
+              <a href="#festivals-worldwide">Festivals WorldWide</a>
+            </li>
+          </div>
+          <!-- all of the icons are static as their are no links so cirsoe has given to over and icons are repaced to scial icons pictures from our locla assets  -->
+          
+
+           <!-- Social media icons -->
+          <div class="flex items-center mt-12">
+            <img
+              src="/assets/FB.png"
+              alt="Facebook"
+              class="h-12 w-auto mr-4 cursor-pointer"
+            />
+            <img
+              src="/assets/twitter.png"
+              alt="Twitter"
+              class="h-12 w-auto mr-4 cursor-pointer"
+            />
+            <img
+              src="/assets/Insta.png"
+              alt="Instagram"
+              class="h-12 w-auto mr-4 cursor-pointer"
+            />
+            <img
+              src="/assets/Linkedin.png"
+              alt="Instagram"
+              class="h-12 w-auto mr-4 cursor-pointer"
+            />
+          </div>
+        </div>
+
+        <!-- Right section with contact information -->
+
+        <div class="text-gray-800 mt-6 md:mt-0">
+          <h4
+            data-aos="fade-in"
+            data-aos-delay="500"
+            data-aos-offset="0"
+            data-aos-easing="ease-in-sine"
+            data-aos-anchor-placement="top-bottom"
+            class="text-3xl font-bold mb-4 text-[#400878]"
+          >
+            Contact
+          </h4>
+          <p class="text-xl mb-4">
+            <span class="font-semibold">WhatsApp:</span> +92 349 3130963
+          </p>
+          <p class="text-xl mb-8">Moonlight Festival</p>
+          <button
+            data-aos="fade-in"
+            data-aos-delay="500"
+            data-aos-offset="100"
+            data-aos-easing="ease-in-sine"
+            data-aos-anchor-placement="top-bottom"
+            id="order-button"
+            class="w-[205px] md:w-[270px]"
+          >
+            Contact US
+          </button>
+          <p class="text-xl mt-2 max-w-3xl mt-6">
+            Moon Light is here to help you. With our large team of experts, we
+            provide comprehensive assistance to the best of your
+            satisfaction.And provide deatils accordign to your spefic needs.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="bg-[#610772] py-12 text-center text-white text-2xl font-normal">
+      <p class="text-white">
+        © 2024
+        <a
+          href="index.html"
+          class="text-white hover:opacity-80 font-semibold transition-opacity nav-link"
+        >
+          MoonLight Festival
+        </a>
+      </p>
+    </div>
+
+<!-- Importing JavaScript file for header functionality -->
+    <script src="header.js"></script>
+
+
+<!-- Script for filtering festival items based on religion, month, and country -->
+    <script>
+      
+      document.addEventListener("DOMContentLoaded", function () {
+        const religionFilter = document.getElementById("religion-filter");
+        const countryFilter = document.getElementById("country-filter");
+        const monthFilter = document.getElementById("month-filter");
+        const festivalItems = document.querySelectorAll("#festival-type");
+
+        console.log(festivalItems);
+
+        function filterItems() {
+          const selectedReligion = religionFilter.value;
+          const selectedMonth = monthFilter.value;
+          const selectedCountry = countryFilter.value;
+
+          festivalItems.forEach((item) => {
+            const religion = item.dataset.religion;
+            const month = item.dataset.month;
+            const country = item.dataset.country;
+
+            const religionMatch =
+              selectedReligion === "all" || religion === selectedReligion;
+            const monthMatch =
+              selectedMonth === "all" || month === selectedMonth;
+
+            const countryMatch =
+              selectedCountry === "all" || country === selectedCountry;
+
+            if (religionMatch && monthMatch && countryMatch) {
+              item.style.display = "block";
+            } else {
+              item.style.display = "none";
+            }
+          });
+        }
+
+        religionFilter.addEventListener("change", filterItems);
+        monthFilter.addEventListener("change", filterItems);
+        countryFilter.addEventListener("change", filterItems);
+
+        filterItems();
+      });
+    </script>
+    <!--  End Script for filtering festival items based on religion, month, and country -->
+
+    
+    <!-- Script to handle button click event to navigate to contact.html -->
+    <script>
+      var buttons = document.querySelectorAll("#order-button");
+
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          window.location.href = "contact.html";
+        });
+      });
+    </script>
+
+    <script>
+      // Smooth scroll function
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href").substring(1);
+          const targetElement = document.getElementById(targetId);
+
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
